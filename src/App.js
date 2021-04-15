@@ -17,10 +17,7 @@ function App() {
 
 	const addItem = (item) => {
 		// add the given item to the cart
-		if (!cart.find((i) => i.id === item.id)) {
-			setCart([...cart, item]);
-			localCart.current.push(item);
-		}
+		if (!cart.find((i) => i.id === item.id)) setCart([...cart, item]);
 	};
 
 	const removeItem = (id) => {
